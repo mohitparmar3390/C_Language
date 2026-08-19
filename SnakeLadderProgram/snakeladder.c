@@ -9,6 +9,61 @@ int rollDie() { return rand() % 6 + 1; }
 // global variables store postions of player1 and player2
 int player1 = 0, player2 = 0;
 
+// function bord print and process game function.
+void printBoard()
+{
+    // logic to print a snake-ladder Game board, programmer can implement their own logic for the board, this is one way to print a snake ladder board.
+    int board[101];
+    for (int i = 1; i <= 100; i++) {
+        board[i] = i;
+    }
+
+    int alt = 0; // to switch between the alternate nature of the board
+    int iterLR = 101; // iterator to print from left to right
+    int iterRL = 80;  // iterator to print from right to left
+    int val = 100;    
+    while (val--) {
+        if (alt == 0) {
+            iterLR--;
+            if (iterLR == player1) {
+                printf("#P1    ");
+            }
+            else if (iterLR == player2) {
+                printf("#P2    ");
+            }
+            else
+                printf("%d    ", board[iterLR]);
+
+            if (iterLR % 10 == 1) {
+                printf("\n\n");
+                alt = 1;
+                iterLR -= 10;
+            }
+        }
+        else {
+            iterRL++;
+            if (iterRL == player1) {
+                printf("#P1    ");
+            }
+            else if (iterRL == player2) {
+                printf("#P2    ");
+            }
+            else
+                printf("%d    ", board[iterRL]);
+
+            if (iterRL % 10 == 0) {
+                printf("\n\n");
+                alt = 0;
+                iterRL -= 30;
+            }
+        }
+        if (iterRL == 10)
+            break;
+    }
+    printf("\n");
+}
+
+
 //function movePlayer 
 int movePlayer(int currentPlayer, int roll)
 {
