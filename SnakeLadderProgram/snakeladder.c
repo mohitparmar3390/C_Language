@@ -99,12 +99,44 @@ int movePlayer(int currentPlayer, int roll)
 
 int main()
 {
-    srand(time(0)); 
+    srand(time(0)); // Initialize random seed
     int currentPlayer = 1;
     int won = 0;
+
     printf("Snake and Ladder Game\n");
 
     while (!won) {
+
+        printf(
+            "\nPlayer %d, press Enter to roll the die...",
+            currentPlayer);
+        getchar(); // Wait for the player to press Enter
+        int roll = rollDie();
+        printf("You rolled a %d.\n", roll);
+
+        if (currentPlayer == 1) {
+            player1 = movePlayer(player1, roll);
+            printf("Player 1 is now at square %d.\n\n",
+                   player1);
+            printBoard();
+            if (player1 == 100) {
+                printf("Player 1 wins!\n");
+                won = 1;
+            }
+        }
+        else {
+            player2 = movePlayer(player2, roll);
+            printf("Player 2 is now at square %d.\n\n",
+                   player2);
+            printBoard();
+            if (player2 == 100) {
+                printf("Player 2 wins!\n");
+                won = 1;
+            }
+        }
+
+        // Switch to the other player
+        currentPlayer = (currentPlayer == 1) ? 2 : 1;
     }
 
     return 0;
