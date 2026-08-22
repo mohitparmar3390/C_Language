@@ -52,6 +52,23 @@ A word guessing game where the player guesses a randomly selected word using a g
 
 ---
 
+#### 4. Snake Ladder Game
+
+A console-based Snake and Ladder game developed in C where two players move across the board using dice rolls, snakes, and ladders.
+
+**Concepts:**
+- Functions
+- Arrays
+- Loops
+- Conditional Statements
+- Global Variables
+- Random Number Generation
+- `rand()` and `srand()`
+- `time()` from `time.h`
+- Function Parameters & Return Values
+- Game Logic
+
+
 ## Concepts Covered
 
 - Variables & Data Types
@@ -64,14 +81,13 @@ A word guessing game where the player guesses a randomly selected word using a g
 - Strings
 - Structures
 - Boolean Logic
-- Random Numbers
 - Input Validation
 - Character Handling
-- Boolean Logic
 - Score Tracking
-- Character Handling
 - Basic Error Handling
-  
+- Game Logic
+- Game State Management
+- Random Number Generation
 
 ---
 
