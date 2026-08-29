@@ -1,4 +1,4 @@
-## 🏧 ATM Cash Withdrawal System
+### 🏧 ATM Cash Withdrawal System
 
 A simple **ATM Cash Withdrawal System written in C** that simulates cash withdrawal using available ₹100, ₹200, ₹500, and ₹2000 notes.
 
