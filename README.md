@@ -71,6 +71,20 @@ A console-based Snake and Ladder game developed in C where two players move acro
 
 #### 4. ATM Machine Program
 
+A console-based ATM Cash Withdrawal System that allows users to withdraw money and automatically calculates the required currency notes.
+
+**Concepts:**
+- Variables & Data Types
+- Input/Output
+- Conditional Statements
+- Arithmetic Operations
+- Global Variables
+- Currency Note Calculation
+- Input Validation
+- Basic Error Handling
+- Transaction Logic
+- Resource Management
+
 ## Concepts Covered
 
 - Variables & Data Types
